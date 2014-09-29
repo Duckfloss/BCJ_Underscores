@@ -1,0 +1,50 @@
+// VARIABLES
+$header-size: 48px;
+$body-size: 14px;
+
+$black: #222222;
+$link: #ffccff;
+
+$frame-color: $black;
+$content-bg: #ffffff;
+
+
+// BASE STYLES
+body {
+  background-color: $black;
+}
+
+header, #content, #page {
+  background-color: $content-bg;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 3px solid $link;
+  color: $black;
+  &:visited {
+    color: $black;
+  }
+  &:hover {
+    background-color: lighten($link, 5%);
+    color: $black;
+  }
+}
+
+.folio {
+  .folio-tags {
+    a {
+      line-height: 2em;
+    }
+  }
+  a {
+    border-bottom: 3px solid lighten($black, 40%);
+    &:visited {
+      color: $black;
+    }
+    &:hover {
+      background-color: lighten($black, 60%);
+      color: $black;
+    }
+  }
+}

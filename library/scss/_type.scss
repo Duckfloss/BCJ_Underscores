@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);
+
+@font-face {
+    font-family: Arvo;
+}
+
+@font-face {
+  font-family: Verdana;
+}
+
+$header-font: 'Arvo', serif;
+$body-font: 'Verdana', sans-serif;
+
+h1, h2, h3, h4, h5 {
+  font-family: $header-font;
+}
+
+h1 {
+  font-size: floor($header-size * .75);
+}
+
+h2 {
+  font-size: floor($header-size * .4);
+}
+
+h3 {
+  font-size: floor($header-size * .5);
+  font-weight: bold;
+}
+
+h4 {
+  font-size: floor($header-size * .4);
+  font-weight: bold;
+  color: lighten($black, 70%);
+}
+
+p {
+  font-family: $body-font;
+  font-size: $body-size;
+}
+
+.site-header {
+  a {
+    color: $black;
+    &:visited {
+      color: $black;
+    }
+    &:hover {
+    }
+  }
+}
+
+
+.folio-item {
+  h2.folio-title {
+    margin: 0 5px;
+//    display: inline;
+    a {
+      border-bottom: 0;
+    }
+  }
+  span.folio-tags {
+    font-size: $body-size;
+    margin-left: 5px;
+    a {
+      padding: 5px 5px 0;
+    }
+  }
+}
+
+h1.menu-toggle {
+  font-size: $body-size;
+  padding-top: 0 !important;
+  a {
+    border-bottom: 0;
+  }
+}
+.nav-menu a {
+  border-bottom: 0;
+}
+
+@media screen and (min-width: 761px) {
+  .site-branding {
+    h1 {
+      font-size: $header-size;
+      font-weight: bold;
+    }
+    h2 {
+      float: right;
+      margin-top: -10px;
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) and (min-width: 601px) {
+  .site-branding {
+    h1 {
+      font-size: floor($header-size * .75);
+      font-weight: bold;
+    }
+    h2 {
+      float: right;
+      margin-top: -10px;
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .site-branding {
+    h1 {
+      font-size: floor($header-size * .6);
+      font-weight: bold;
+      float: left;
+    }
+    h2 {
+      font-size: floor($header-size * .4);
+      float: left;
+      margin: 0 22px 10px;
+      width: 100px;
+      line-height: 1em;
+    }
+  }
+}
